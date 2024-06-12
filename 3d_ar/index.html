@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Complex 3D Object with A-Frame</title>
+    <meta name="description" content="A 3D scene created with A-Frame">
+    <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+  </head>
+  <body>
+    <a-scene>
+      <!-- Background color -->
+      <a-sky color="#ECECEC"></a-sky>
+
+      <!-- Ground -->
+      <a-plane position="0 0 -5" rotation="-90 0 0" width="10" height="10" color="#7BC8A4"></a-plane>
+
+      <!-- Central Cube -->
+      <a-box position="0 1 -3" rotation="0 45 0" width="1" height="1" depth="1" color="#4CC3D9"></a-box>
+
+      <!-- Smaller Cube on top -->
+      <a-box position="0 2 -3" rotation="0 45 0" width="0.5" height="0.5" depth="0.5" color="#FFC65D"></a-box>
+
+      <!-- Right Cylinder -->
+      <a-cylinder position="2 1 -3" radius="0.5" height="2" color="#FF6347"></a-cylinder>
+
+      <!-- Left Sphere -->
+      <a-sphere position="-2 1 -3" radius="0.75" color="#EF2D5E"></a-sphere>
+
+      <!-- Back Cone -->
+      <a-cone position="0 1 -6" radius-bottom="1" radius-top="0.5" height="2" color="#7BC8A4"></a-cone>
+
+      <!-- Front Torus -->
+      <a-torus position="0 0.5 -1" radius="0.5" tube="0.1" color="#FFC0CB"></a-torus>
+
+      <!-- Light -->
+      <a-light type="directional" position="-2 4 -3" intensity="1"></a-light>
+
+      <!-- Camera with movement and mouse controls -->
+      <a-entity camera look-controls wasd-controls position="0 1.6 0"></a-entity>
+    </a-scene>
+  </body>
+</html>
